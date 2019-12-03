@@ -8,10 +8,6 @@
 #include <string.h>
 #include "Buckets n Bombs.h"
 
-#define BOOL unsigned char
-#define TRUE 1
-#define FALSE 0
-#define NUM_SPRITES 8
 
 /* The VIC pointer to data for sprite 0 */
 unsigned char* SPRITE0_POINTER=(unsigned char*)0x7f8;
