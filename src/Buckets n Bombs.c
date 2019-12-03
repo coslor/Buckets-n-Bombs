@@ -6,10 +6,12 @@
 #include <peekpoke.h>
 #include <conio.h>
 #include <string.h>
+#include "Buckets n Bombs.h"
 
-#define BOOL char
+#define BOOL unsigned char
 #define TRUE 1
 #define FALSE 0
+#define NUM_SPRITES 8
 
 /* The VIC pointer to data for sprite 0 */
 unsigned char* SPRITE0_POINTER=(unsigned char*)0x7f8;
@@ -22,88 +24,66 @@ unsigned char* SPRITE0_POINTER=(unsigned char*)0x7f8;
 //extern unsigned char SPRITE0_BUFFER[];
 
 //stylized tennis shoe - 
-extern const unsigned char *shoe_img;
-
-//bucket
-extern const unsigned char *bucket_img;
-
-//first frame of bomb animation
-extern const unsigned char *bomb_img1;
-		
-typedef unsigned char color;
-
-typedef struct  {
-	int		x;
-	int		y;
-} vector2;
-
-typedef struct  {
-	vector2	loc;
-	vector2	speed;
-	
-	unsigned char	color[4];
-	BOOL	multicolor;
-	
-	//vector2	expand;
-	BOOL	expand_x;
-	BOOL	expand_y;
-	
-	BOOL	enabled;
-	
-	unsigned char	*image_buffer;
-} sprite;
-sprite  sprites[8];
-
-
-void delay(int time);
-void main_loop(int* x, int* y);
-void copy_sprite(unsigned char sprite_buffer[], unsigned char image_data[]);
-void enable_sprite(int sprite_num, BOOL enabled);
-void enable_multicolor(int sprite_num, BOOL multicolor);
-void set_sprite_color(int sprite_num, BOOL multicolor, 
-		unsigned char color0, unsigned char color1, unsigned char color2, unsigned char color3);
-void set_image(sprite* s, unsigned char* buffer);
+//extern const unsigned char *shoe_img;
 
 
 void main(void) {
-	int i;
-	int x,y, xInc, yInc;
-	int sprite0Ratio;
+	//int i;
+	//int x,y, xInc, yInc;
+	//int sprite_ratio;	
+	sprite t = {
+		0,			//VIC sprite num
+		{0,0},		//loc
+		{0,0},		//speed
+		{0,1,2,3},	//color
+		TRUE,		//multicolor?
+		FALSE,		//expand x?
+		FALSE,		//expand y?
+		TRUE		//enabled?
+		//(unsigned char*)bomb_img1	//image
+	 };
+	 t.image_buffer = bomb_img1;
 
+	sprites[0] = t;
+	
+	
+	
+	
+	//init_sprite();
 	clrscr();
-	printf("Hello C64! shoe buffer=%x\n", shoe_img);
+	//printf("Hello C64! shoe buffer=%x\n", shoe_img);
 		
 	//bufferInt = SPRITE0_BUFFER;
-	sprite0Ratio = (int)shoe_img / 64;
+	//sprite_ratio = (int)shoe_img / 64;
 
 	////TODO fix warning here: 
 	//copy_sprite(SPRITE0_BUFFER, bomb_img1);
 	
 
-	*SPRITE0_POINTER = sprite0Ratio;
+	//*SPRITE0_POINTER = sprite_ratio;
 	
-	printf("SPRITE0_POINTER[0] should contain %d, does contain %d\n", sprite0Ratio, *SPRITE0_POINTER);
+	//printf("SPRITE0_POINTER[0] should contain %d, does contain %d\n", sprite_ratio, *SPRITE0_POINTER);
 	
 	
-	VIC.spr_hi_x = 0;
-	VIC.spr0_x = 100;
-	VIC.spr0_y = 100;
+	// VIC.spr_hi_x = 0;
+	// VIC.spr0_x = 100;
+	// VIC.spr0_y = 100;
 	
-	printf("Turning sprite on...\n");
+	// printf("Turning sprite on...\n");
 	
-	//Enable sprite 0
-	VIC.spr_ena |= 1;
+	// //Enable sprite 0
+	// VIC.spr_ena |= 1;
 	
-	xInc=1;
-	yInc=-1;
-	x=24;
-	y=100;
+	// xInc=1;
+	// yInc=-1;
+	// x=24;
+	// y=100;
 	
-	while (TRUE) {
+	// while (TRUE) {
 
-		main_loop(&x, &y);
-		delay(50);
-	}
+		// main_loop(&x, &y);
+		// delay(50);
+	// }
 /* 	for (i=0; i < 255; i++) {
 		VIC.spr0_x = i;
 
@@ -123,7 +103,7 @@ void copy_sprite_image(unsigned char sprite_image_buffer[], unsigned char image_
 
 
 
-void main_loop(int* x, int* y) {
+void main_loop(int *x, int *y) {
 	
 	static int xInc=1;
 	static int yInc=1;
@@ -151,6 +131,40 @@ void main_loop(int* x, int* y) {
 	
 }
 
+
+void move_sprites(sprite sprites[]) {
+	int i;
+	sprite s;
+	unsigned int vic_num;
+	unsigned char pow2;
+	
+	for (i=0; i < NUM_SPRITES; i++) {
+		s = sprites[i];
+		if (s.enabled) {
+			s.loc.x += s.speed.x;
+			s.loc.y += s.speed.y;
+			
+			vic_num = s.VIC_sprite_num;
+			VIC.spr_pos[vic_num].x = (s.loc.x & 255);
+			VIC.spr_pos[vic_num].y = s.loc.y;
+			
+			/* 
+				The sprite's x coord is a 9-bit value, and the top bit is held in spr_hi_x.
+				To set it, we need to set (or unset) the bit corresponding to VIC's sprite #.
+			*/
+			if (s.loc.x > 255) {
+					pow2 = 2 << vic_num;
+				VIC.spr_hi_x = VIC.spr_hi_x | pow2;
+			}
+			else {
+				VIC.spr_hi_x = VIC.spr_hi_x & (255 - pow2);
+			}
+			
+		}
+	}
+}
+
+
 void delay(int time) {
 	int i;
 	
@@ -159,34 +173,36 @@ void delay(int time) {
 	}
 }
 
-void set_sprite_image_handle(int sprite_num, unsigned char* image_buffer) {
-	//TODO deal with paging here
-	int sprite0Ratio = (int)image_buffer / 64;
+void set_sprite_image_handle(sprite *s, unsigned char *image_buffer) {
+	//TODO deal with bank switching, etc. here
+	int sprite_addr_ratio = (int)image_buffer / 64;
 
-	*(SPRITE0_POINTER + sprite_num) = sprite0Ratio;
+	*(SPRITE0_POINTER + s->VIC_sprite_num) = sprite_addr_ratio;
 
-	sprites[sprite_num].image_buffer = image_buffer;
+	s->image_buffer = image_buffer;
 
 }
 
-void init_sprite(int sprite_num, int x, int y, BOOL active,
+void init_sprite(sprite *spr, int x, int y, BOOL active,
 		BOOL multicolor, unsigned char color0, unsigned char color1, unsigned char color2, unsigned char color3,
-		BOOL expand_x, BOOL expand_y, unsigned char* image_buffer) {
-	sprites[sprite_num].loc.x = x;
-	sprites[sprite_num].loc.y = y;
+		BOOL expand_x, BOOL expand_y, unsigned char *image_buffer) {
 	
+	spr->loc.x = x;
+	spr->loc.y = y;
+	
+	spr->loc.x = x;
+	spr->loc.y = y;
 
-	sprites[sprite_num].expand_x = expand_x;
-	sprites[sprite_num].expand_y = expand_y;
+	spr->expand_x = expand_x;
+	spr->expand_y = expand_y;
 	
 	
 	//Now, do the necessary VIC2 stuff for this sprite
-	set_sprite_image_handle(sprite_num, image_buffer);
-	enable_sprite(sprite_num, active);
-	set_sprite_color(sprite_num, multicolor, color0, color1, color2, color3);
-	
-	
+	set_sprite_image_handle(spr, image_buffer);
+	enable_sprite(spr, (BOOL)active);
+	set_sprite_color(spr, multicolor, color0, color1, color2, color3);	
 }
+
 
 unsigned int set_bit(unsigned int start_value, int bit_num, BOOL bool_value) {
 	unsigned int final_value;
@@ -201,36 +217,45 @@ unsigned int set_bit(unsigned int start_value, int bit_num, BOOL bool_value) {
 	}
 	return final_value;
 }
-void enable_sprite(int sprite_num, BOOL enabled) {
-	VIC.spr_ena = set_bit(VIC.spr_ena, sprite_num, enabled);
-	sprites[sprite_num].enabled = enabled;
+
+
+void enable_sprite(sprite *s, BOOL enabled) {
+	VIC.spr_ena = set_bit(VIC.spr_ena, s->VIC_sprite_num, enabled);
+	s->enabled = enabled;
 }
 
-void enable_multicolor(int sprite_num, BOOL multicolor) {
-	VIC.spr_mcolor = set_bit(VIC.spr_mcolor, sprite_num, multicolor);
+
+void set_multicolor(sprite *s, BOOL multicolor) {
+	VIC.spr_mcolor = set_bit(VIC.spr_mcolor, s->VIC_sprite_num, multicolor);
+	s->multicolor = multicolor;
 }
 
-void set_sprite_color(int sprite_num, BOOL multicolor, 
+
+void set_sprite_color(sprite *s, BOOL multicolor, 
 		unsigned char color0, unsigned char color1, unsigned char color2, unsigned char color3) {
-	sprites[sprite_num].multicolor = multicolor;
+	s->multicolor = multicolor;
 	
-	sprites[sprite_num].color[0] = color0;
-	sprites[sprite_num].color[0] = color1;
-	sprites[sprite_num].color[0] = color2;
-	sprites[sprite_num].color[0] = color3;
+	s->color[0] = color0;
+	s->color[1] = color1;
+	s->color[2] = color2;
+	s->color[3] = color3;
 
-	VIC.spr_mcolor |= 1;
+	VIC.spr_mcolor = set_bit(VIC.spr_mcolor, s->VIC_sprite_num, multicolor);
 	
 	//Set x and y coords to 100
-	VIC.spr0_color = COLOR_BLACK;
-	VIC.spr_mcolor0 = COLOR_ORANGE;
-	VIC.spr_mcolor1 = COLOR_YELLOW;
+	*(unsigned char*)(VIC.spr0_color + s->VIC_sprite_num) = color1;
+	VIC.spr_mcolor0 = color2;
+	VIC.spr_mcolor1 = color3;
 	
 }
-void set_image(sprite* s, unsigned char* buffer) {
+
+
+void set_image(sprite *s, unsigned char* buffer) {
 	
 }
-void update_sprite(sprite *sp) {
+
+
+void update_sprite(sprite *s) {
 	
 }
 
