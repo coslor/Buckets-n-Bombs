@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "cl65.exe build active file",
+            "command": "C:\\Users\\chris\\cc65\\bin\\cl65.exe",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-g",
+                "-I \"include\""
+            ],
+            "options": {
+                "cwd": "C:\\Users\\chris\\cc65\\bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
+        }
+    ]
+}

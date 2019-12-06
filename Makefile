@@ -22,7 +22,7 @@
 # -include include
 
 TARGET_NAME=Buckets_n_Bombs
-TARGET="bin\$(TARGET_NAME).bin"
+TARGET="bin\$(TARGET_NAME).prg"
 
 VICE_HOME=C:\Users\chris\WinVice\GTK3VICE-3.3-win64-r37152
 VICE=$(VICE_HOME)\x64sc.exe
@@ -34,7 +34,8 @@ all: run
 $(TARGET):
 # 	-O for optimized ocde ,-g for debugging
 #	cl65 -O -I "include" -o $(TARGET) "src\Buckets n Bombs.c" "src\sprite_data.s"
-	cl65 -g --debug-info -Wl  --dbgfile,BnB.dbg -Ln BnB.lbl -m BnB.map -C BnB-c64.cfg -I "include" -o $(TARGET) "src\Buckets n Bombs.c" "src\sprite_data.s"
+#	cl65 -g --debug-info -Wl  --dbgfile,BnB.dbg -Ln BnB.lbl -m BnB.map -C BnB-c64.cfg -I "include" -o $(TARGET) "src\Buckets n Bombs.c" "src\sprite_data.s"
+	cl65 -g --debug-info -Wl  --dbgfile,BnB.dbg -Ln "bin\Buckets n Bombs.lbl" -m BnB.map  -I "include" -o $(TARGET) "src\Buckets n Bombs.c" "src\sprite_data.s"
 	
 clean:
 	del /F $(DISK_NAME) $(TARGET)

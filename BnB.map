@@ -1,166 +1,109 @@
 Modules list:
 -------------
 Buckets n Bombs.o:
-    CODE              Offs=000000  Size=000797  Align=00001  Fill=0000
-    RODATA            Offs=000000  Size=00015A  Align=00001  Fill=0000
+    CODE              Offs=000000  Size=0006B6  Align=00001  Fill=0000
+    RODATA            Offs=000000  Size=000004  Align=00001  Fill=0000
     BSS               Offs=000000  Size=00009A  Align=00001  Fill=0000
     DATA              Offs=000000  Size=000002  Align=00001  Fill=0000
 sprite_data.o:
-    CODE              Offs=0007C0  Size=0000C0  Align=00040  Fill=0029
-c:\Users\chris\cc65/lib/c64.lib(_directerrno.o):
-    CODE              Offs=000880  Size=00000A  Align=00001  Fill=0000
-c:\Users\chris\cc65/lib/c64.lib(_file.o):
-    DATA              Offs=000002  Size=00001E  Align=00001  Fill=0000
-c:\Users\chris\cc65/lib/c64.lib(_hextab.o):
-    RODATA            Offs=00015A  Size=000010  Align=00001  Fill=0000
-c:\Users\chris\cc65/lib/c64.lib(_longminstr.o):
-    RODATA            Offs=00016A  Size=00000C  Align=00001  Fill=0000
-c:\Users\chris\cc65/lib/c64.lib(_mappederrno.o):
-    CODE              Offs=00088A  Size=000010  Align=00001  Fill=0000
-c:\Users\chris\cc65/lib/c64.lib(_oserror.o):
-    BSS               Offs=00009A  Size=000001  Align=00001  Fill=0000
-c:\Users\chris\cc65/lib/c64.lib(_printf.o):
-    CODE              Offs=00089A  Size=0003A5  Align=00001  Fill=0000
-    BSS               Offs=00009B  Size=00002B  Align=00001  Fill=0000
-    DATA              Offs=000020  Size=000003  Align=00001  Fill=0000
-c:\Users\chris\cc65/lib/c64.lib(_seterrno.o):
-    CODE              Offs=000C3F  Size=000009  Align=00001  Fill=0000
+    CODE              Offs=0006C0  Size=0000C0  Align=00040  Fill=000A
 c:\Users\chris\cc65/lib/c64.lib(add.o):
-    CODE              Offs=000C48  Size=00001C  Align=00001  Fill=0000
+    CODE              Offs=000780  Size=00001C  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(addysp.o):
-    CODE              Offs=000C64  Size=00000E  Align=00001  Fill=0000
+    CODE              Offs=00079C  Size=00000E  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(and.o):
-    CODE              Offs=000C72  Size=000010  Align=00001  Fill=0000
+    CODE              Offs=0007AA  Size=000010  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(aslax1.o):
-    CODE              Offs=000C82  Size=000008  Align=00001  Fill=0000
+    CODE              Offs=0007BA  Size=000008  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(asrax2.o):
-    CODE              Offs=000C8A  Size=00000F  Align=00001  Fill=0000
+    CODE              Offs=0007C2  Size=00000F  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(asrax4.o):
-    CODE              Offs=000C99  Size=000019  Align=00001  Fill=0000
-c:\Users\chris\cc65/lib/c64.lib(axlong.o):
-    CODE              Offs=000CB2  Size=00000D  Align=00001  Fill=0000
+    CODE              Offs=0007D1  Size=000019  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(callmain.o):
-    CODE              Offs=000CBF  Size=000017  Align=00001  Fill=0000
-    DATA              Offs=000023  Size=000004  Align=00001  Fill=0000
+    CODE              Offs=0007EA  Size=000017  Align=00001  Fill=0000
+    DATA              Offs=000002  Size=000004  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(clrscr.o):
 c:\Users\chris\cc65/lib/c64.lib(condes.o):
-    CODE              Offs=000CD6  Size=00000C  Align=00001  Fill=0000
-    DATA              Offs=000027  Size=000025  Align=00001  Fill=0000
+    CODE              Offs=000801  Size=00000C  Align=00001  Fill=0000
+    DATA              Offs=000006  Size=000025  Align=00001  Fill=0000
     ONCE              Offs=000000  Size=00000C  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(crt0.o):
     STARTUP           Offs=000000  Size=000033  Align=00001  Fill=0000
     ONCE              Offs=00000C  Size=00001A  Align=00001  Fill=0000
     INIT              Offs=000000  Size=00001C  Align=00001  Fill=0000
-c:\Users\chris\cc65/lib/c64.lib(ctype.o):
-    RODATA            Offs=000176  Size=000100  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(decsp1.o):
-    CODE              Offs=000CE2  Size=000009  Align=00001  Fill=0000
+    CODE              Offs=00080D  Size=000009  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(decsp2.o):
-    CODE              Offs=000CEB  Size=00000D  Align=00001  Fill=0000
+    CODE              Offs=000816  Size=00000D  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(decsp4.o):
-    CODE              Offs=000CF8  Size=00000D  Align=00001  Fill=0000
+    CODE              Offs=000823  Size=00000D  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(decsp6.o):
-    CODE              Offs=000D05  Size=00000D  Align=00001  Fill=0000
-c:\Users\chris\cc65/lib/c64.lib(decsp8.o):
-    CODE              Offs=000D12  Size=00000D  Align=00001  Fill=0000
-c:\Users\chris\cc65/lib/c64.lib(errno.o):
-    BSS               Offs=0000C6  Size=000002  Align=00001  Fill=0000
+    CODE              Offs=000830  Size=00000D  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(exehdr.o):
     EXEHDR            Offs=000000  Size=00000C  Align=00001  Fill=0000
-c:\Users\chris\cc65/lib/c64.lib(filedes.o):
-    CODE              Offs=000D1F  Size=00000E  Align=00001  Fill=0000
-    DATA              Offs=00004C  Size=000010  Align=00001  Fill=0000
-c:\Users\chris\cc65/lib/c64.lib(fwrite.o):
-    CODE              Offs=000D2D  Size=00007B  Align=00001  Fill=0000
-    BSS               Offs=0000C8  Size=000002  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(icmp.o):
-    CODE              Offs=000DA8  Size=00002E  Align=00001  Fill=0000
+    CODE              Offs=00083D  Size=00002E  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(incax1.o):
-    CODE              Offs=000DD6  Size=000007  Align=00001  Fill=0000
+    CODE              Offs=00086B  Size=000007  Align=00001  Fill=0000
+c:\Users\chris\cc65/lib/c64.lib(incaxy.o):
+    CODE              Offs=000872  Size=00000B  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(incsp2.o):
-    CODE              Offs=000DDD  Size=000016  Align=00001  Fill=0000
+    CODE              Offs=00087D  Size=000016  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(incsp3.o):
-    CODE              Offs=000DF3  Size=000005  Align=00001  Fill=0000
+    CODE              Offs=000893  Size=000005  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(incsp4.o):
-    CODE              Offs=000DF8  Size=000005  Align=00001  Fill=0000
+    CODE              Offs=000898  Size=000005  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(incsp5.o):
-    CODE              Offs=000DFD  Size=000005  Align=00001  Fill=0000
+    CODE              Offs=00089D  Size=000005  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(incsp6.o):
-    CODE              Offs=000E02  Size=000005  Align=00001  Fill=0000
+    CODE              Offs=0008A2  Size=000005  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(incsp8.o):
-    CODE              Offs=000E07  Size=000005  Align=00001  Fill=0000
+    CODE              Offs=0008A7  Size=000005  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(kernal.o):
 c:\Users\chris\cc65/lib/c64.lib(ldaui.o):
-    CODE              Offs=000E0C  Size=000009  Align=00001  Fill=0000
+    CODE              Offs=0008AC  Size=000009  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(ldaxi.o):
-    CODE              Offs=000E15  Size=00000D  Align=00001  Fill=0000
+    CODE              Offs=0008B5  Size=00000D  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(ldaxsp.o):
-    CODE              Offs=000E22  Size=000009  Align=00001  Fill=0000
-c:\Users\chris\cc65/lib/c64.lib(lneg.o):
-    CODE              Offs=000E2B  Size=00001E  Align=00001  Fill=0000
+    CODE              Offs=0008C2  Size=000009  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(loadaddr.o):
     LOADADDR          Offs=000000  Size=000002  Align=00001  Fill=0000
-c:\Users\chris\cc65/lib/c64.lib(lpush.o):
-    CODE              Offs=000E49  Size=000021  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(lt.o):
-    CODE              Offs=000E6A  Size=00000A  Align=00001  Fill=0000
-c:\Users\chris\cc65/lib/c64.lib(ltoa.o):
-    CODE              Offs=000E74  Size=000095  Align=00001  Fill=0000
+    CODE              Offs=0008CB  Size=00000A  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(makebool.o):
-    CODE              Offs=000F09  Size=00002C  Align=00001  Fill=0000
+    CODE              Offs=0008D5  Size=00002C  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(memcpy.o):
-    CODE              Offs=000F35  Size=00003C  Align=00001  Fill=0000
+    CODE              Offs=000901  Size=00003C  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(mul.o):
-    CODE              Offs=000F71  Size=000045  Align=00001  Fill=0000
+    CODE              Offs=00093D  Size=000045  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(mul8.o):
-    CODE              Offs=000FB6  Size=00003A  Align=00001  Fill=0000
+    CODE              Offs=000982  Size=00003A  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(or.o):
-    CODE              Offs=000FF0  Size=000012  Align=00001  Fill=0000
-c:\Users\chris\cc65/lib/c64.lib(oserror.o):
-    CODE              Offs=001002  Size=000016  Align=00001  Fill=0000
-    RODATA            Offs=000276  Size=00005A  Align=00001  Fill=0000
+    CODE              Offs=0009BC  Size=000012  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(popptr1.o):
-    CODE              Offs=001018  Size=00000E  Align=00001  Fill=0000
-c:\Users\chris\cc65/lib/c64.lib(printf.o):
-    CODE              Offs=001026  Size=000033  Align=00001  Fill=0000
-    BSS               Offs=0000CA  Size=000001  Align=00001  Fill=0000
-c:\Users\chris\cc65/lib/c64.lib(push1.o):
-    CODE              Offs=001059  Size=000005  Align=00001  Fill=0000
+    CODE              Offs=0009CE  Size=00000E  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(pusha.o):
-    CODE              Offs=00105E  Size=000016  Align=00001  Fill=0000
+    CODE              Offs=0009DC  Size=000016  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(pushax.o):
-    CODE              Offs=001074  Size=00001A  Align=00001  Fill=0000
-c:\Users\chris\cc65/lib/c64.lib(pushwsp.o):
-    CODE              Offs=00108E  Size=00001C  Align=00001  Fill=0000
-c:\Users\chris\cc65/lib/c64.lib(rwcommon.o):
-    CODE              Offs=0010AA  Size=00001C  Align=00001  Fill=0000
+    CODE              Offs=0009F2  Size=00001A  Align=00001  Fill=0000
+c:\Users\chris\cc65/lib/c64.lib(rand.o):
+    CODE              Offs=000A0C  Size=000031  Align=00001  Fill=0000
+    DATA              Offs=00002B  Size=000004  Align=00001  Fill=0000
+c:\Users\chris\cc65/lib/c64.lib(randomize.o):
+    CODE              Offs=000A3D  Size=000008  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(shl.o):
-    CODE              Offs=0010C6  Size=000033  Align=00001  Fill=0000
+    CODE              Offs=000A45  Size=000033  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(staspidx.o):
-    CODE              Offs=0010F9  Size=000016  Align=00001  Fill=0000
+    CODE              Offs=000A78  Size=000016  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(status.o):
 c:\Users\chris\cc65/lib/c64.lib(staxsp.o):
-    CODE              Offs=00110F  Size=00000B  Align=00001  Fill=0000
+    CODE              Offs=000A8E  Size=00000B  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(staxspi.o):
-    CODE              Offs=00111A  Size=00001B  Align=00001  Fill=0000
-c:\Users\chris\cc65/lib/c64.lib(strlen.o):
-    CODE              Offs=001135  Size=000016  Align=00001  Fill=0000
-c:\Users\chris\cc65/lib/c64.lib(strlower.o):
-    CODE              Offs=00114B  Size=000028  Align=00001  Fill=0000
+    CODE              Offs=000A99  Size=00001B  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(sub.o):
-    CODE              Offs=001173  Size=000015  Align=00001  Fill=0000
-c:\Users\chris\cc65/lib/c64.lib(subysp.o):
-    CODE              Offs=001188  Size=00000D  Align=00001  Fill=0000
-c:\Users\chris\cc65/lib/c64.lib(udiv.o):
-    CODE              Offs=001195  Size=00004F  Align=00001  Fill=0000
-c:\Users\chris\cc65/lib/c64.lib(vfprintf.o):
-    CODE              Offs=0011E4  Size=000061  Align=00001  Fill=0000
-    DATA              Offs=00005C  Size=000008  Align=00001  Fill=0000
-c:\Users\chris\cc65/lib/c64.lib(write.o):
-    CODE              Offs=001245  Size=000054  Align=00001  Fill=0000
-    ONCE              Offs=000026  Size=000011  Align=00001  Fill=0000
+    CODE              Offs=000AB4  Size=000015  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(zerobss.o):
-    CODE              Offs=001299  Size=000023  Align=00001  Fill=0000
+    CODE              Offs=000AC9  Size=000023  Align=00001  Fill=0000
 c:\Users\chris\cc65/lib/c64.lib(zeropage.o):
     ZEROPAGE          Offs=000000  Size=00001A  Align=00001  Fill=0000
 
@@ -173,151 +116,104 @@ ZEROPAGE              000002  00001B  00001A  00001
 LOADADDR              0007FF  000800  000002  00001
 EXEHDR                000801  00080C  00000C  00001
 STARTUP               00080D  00083F  000033  00001
-CODE                  000840  001AFB  0012BC  00040
-RODATA                001AFC  001DCB  0002D0  00001
-DATA                  001DCC  001E2F  000064  00001
-INIT                  001E30  001E4B  00001C  00001
-BSS                   001E4C  001F16  0000CB  00001
-ONCE                  001E4C  001E84  000039  00001
+CODE                  000840  00132B  000AEC  00040
+RODATA                00132C  00132F  000004  00001
+DATA                  001330  00135E  00002F  00001
+INIT                  00135F  00137A  00001C  00001
+BSS                   00137B  001414  00009A  00001
+ONCE                  00137B  0013A0  000026  00001
 
 
 Exports list by name:
 ---------------------
-BSOUT                     00FFD2 RLA    CKOUT                     00FFC9 RLA    
-CLRCH                     00FFCC RLA    OPEN                      00FFC0 RLA    
-READST                    00FFB7 RLA    SETLFS                    00FFBA RLA    
-ST                        000090 RLZ    __BSS_RUN__               001E4C RLA    
-__BSS_SIZE__              0000CB REA    __CONSTRUCTOR_COUNT__     000001 REA    
-__CONSTRUCTOR_TABLE__     001E83 RLA    __DESTRUCTOR_COUNT__      000000 REA    
-__DESTRUCTOR_TABLE__      001DCC RLA    __EXEHDR__                000001 REA    
-__HEADER_LAST__           00080D RLA    __HIMEM__                 00D000 REA    
-__LOADADDR__              000001 REA    __MAIN_SIZE__             00C7F3 REA    
-__MAIN_START__            00080D RLA    __ONCE_RUN__              001E4C RLA    
-__STACKSIZE__             000800 REA    __STARTUP__               000001 REA    
-__ctype                   001C72 RLA    __directerrno             0010C0 RLA    
-__errno                   001F12 RLA    __hextab                  001C56 RLA    
-__longminstr              001C66 RLA    __mappederrno             0010CA RLA    
-__oserror                 001EE6 RLA    __osmaperrno              001842 RLA    
-__printf                  0011CD RLA    __seterrno                00147F RLA    
-_bomb_img1                001080 RLA    _bucket_img               001040 RLA    
-_clrscr                   00E544 REA    _fwrite                   00156D RLA    
-_ltoa                     0016CC RLA    _main                     000C84 RLA    
-_memcpy                   001775 RLA    _printf                   001866 RLA    
-_stdout                   001DE8 RLA    _strlen                   001975 RLA    
-_strlower                 00198B RLA    _ultoa                    00170D RLA    
-_vfprintf                 001A5C RLA    _write                    001A85 RLA    
-addysp                    0014A5 RLA    addysp1                   0014A4 RLA    
-aslax1                    0014C2 RLA    asrax2                    0014CA RLA    
-asrax4                    0014D9 RLA    axlong                    0014F2 RLA    
-axulong                   0014F8 RLA    boollt                    001758 RLA    
-boolult                   001768 RLA    callmain                  0014FF RLA    
-decsp1                    001522 RLA    decsp2                    00152B RLA    
-decsp4                    001538 RLA    decsp6                    001545 RLA    
-decsp8                    001552 RLA    donelib                   001516 RLA    
-fdtab                     001E18 RLA    incax1                    001616 RLA    
-incsp2                    001625 RLA    incsp3                    001633 RLA    
-incsp4                    001638 RLA    incsp5                    00163D RLA    
-incsp6                    001642 RLA    incsp8                    001647 RLA    
-initlib                   001E4C RLA    initstdout                001E72  LAI   
-ldauidx                   00164C RLA    ldaxidx                   001657 RLA    
-ldaxysp                   001664 RLA    mul8x16                   0017F8 RLA    
-mul8x16a                  001802 RLA    negeax                    00166B RLA    
-popax                     00161D RLA    popptr1                   001858 RLA    
+BSOUT                     00FFD2 RLA    ST                        000090 RLZ    
+__BSS_RUN__               00137B RLA    __BSS_SIZE__              00009A REA    
+__CONSTRUCTOR_COUNT__     000000 REA    __CONSTRUCTOR_TABLE__     0013A1 RLA    
+__DESTRUCTOR_COUNT__      000000 REA    __DESTRUCTOR_TABLE__      001330 RLA    
+__EXEHDR__                000001 REA    __HEADER_LAST__           00080D RLA    
+__HIMEM__                 00D000 REA    __LOADADDR__              000001 REA    
+__MAIN_SIZE__             00C7F3 REA    __MAIN_START__            00080D RLA    
+__ONCE_RUN__              00137B RLA    __STACKSIZE__             000800 REA    
+__STARTUP__               000001 REA    __randomize               00127D RLA    
+_bomb_img1                000F80 RLA    _clrscr                   00E544 REA    
+_main                     000C4E RLA    _memcpy                   001141 RLA    
+_rand                     00124C RLA    _srand                    00126E RLA    
+addysp                    000FDD RLA    addysp1                   000FDC RLA    
+aslax1                    000FFA RLA    asrax2                    001002 RLA    
+asrax4                    001011 RLA    boollt                    001124 RLA    
+boolne                    001115 RLA    boolult                   001134 RLA    
+callmain                  00102A RLA    decsp1                    00104D RLA    
+decsp2                    001056 RLA    decsp4                    001063 RLA    
+decsp6                    001070 RLA    donelib                   001041 RLA    
+incax1                    0010AB RLA    incaxy                    0010B4 RLA    
+incsp2                    0010C5 RLA    incsp3                    0010D3 RLA    
+incsp4                    0010D8 RLA    incsp5                    0010DD RLA    
+incsp6                    0010E2 RLA    incsp8                    0010E7 RLA    
+initlib                   00137B RLA    ldauidx                   0010EC RLA    
+ldaxidx                   0010F7 RLA    ldaxysp                   001104 RLA    
+mul8x16                   0011C4 RLA    mul8x16a                  0011CE RLA    
+popax                     0010BD RLA    popptr1                   00120E RLA    
 ptr1                      00000A RLZ    ptr2                      00000C RLZ    
 ptr3                      00000E RLZ    ptr4                      000010 RLZ    
-push1                     001899 RLA    pusha                     0018A2 RLA    
-pusha0                    0018B6 RLA    pushax                    0018B8 RLA    
-pusheax                   001692 RLA    pushwysp                  0018D0 RLA    
-regbank                   000016 RLZ    regsave                   000006 RLZ    
-rwcommon                  0018EA RLA    sp                        000002 RLZ    
-sreg                      000004 RLZ    staspidx                  001939 RLA    
-staxspidx                 00195A RLA    staxysp                   001951 RLA    
-subysp                    0019C8 RLA    tmp1                      000012 RLZ    
-tmp2                      000013 RLZ    tosaddax                  00148A RLA    
-tosandax                  0014B4 RLA    tosaslax                  001906 RLA    
-tosicmp                   0015EA RLA    tosltax                   0016AE RLA    
-tosmulax                  0017B1 RLA    tosorax                   001832 RLA    
-tossubax                  0019B5 RLA    tosudivax                 0019D7 RLA    
-tosumulax                 0017B1 RLA    zerobss                   001AD9 RLA    
-
+pusha                     001220 RLA    pushax                    001236 RLA    
+regsave                   000006 RLZ    sp                        000002 RLZ    
+sreg                      000004 RLZ    staspidx                  0012B8 RLA    
+staxspidx                 0012D9 RLA    staxysp                   0012D0 RLA    
+tmp1                      000012 RLZ    tosaddax                  000FC2 RLA    
+tosandax                  000FEC RLA    tosaslax                  001285 RLA    
+tosicmp                   00107F RLA    tosltax                   00110F RLA    
+tosmulax                  00117D RLA    tosorax                   0011FE RLA    
+tossubax                  0012F6 RLA    tosumulax                 00117D RLA    
+zerobss                   001309 RLA    
 
 
 Exports list by value:
 ----------------------
-__DESTRUCTOR_COUNT__      000000 REA    __EXEHDR__                000001 REA    
-__CONSTRUCTOR_COUNT__     000001 REA    __LOADADDR__              000001 REA    
-__STARTUP__               000001 REA    sp                        000002 RLZ    
+__DESTRUCTOR_COUNT__      000000 REA    __CONSTRUCTOR_COUNT__     000000 REA    
+__STARTUP__               000001 REA    __LOADADDR__              000001 REA    
+__EXEHDR__                000001 REA    sp                        000002 RLZ    
 sreg                      000004 RLZ    regsave                   000006 RLZ    
 ptr1                      00000A RLZ    ptr2                      00000C RLZ    
 ptr3                      00000E RLZ    ptr4                      000010 RLZ    
-tmp1                      000012 RLZ    tmp2                      000013 RLZ    
-regbank                   000016 RLZ    ST                        000090 RLZ    
-__BSS_SIZE__              0000CB REA    __STACKSIZE__             000800 REA    
-__MAIN_START__            00080D RLA    __HEADER_LAST__           00080D RLA    
-_main                     000C84 RLA    _bucket_img               001040 RLA    
-_bomb_img1                001080 RLA    __directerrno             0010C0 RLA    
-__mappederrno             0010CA RLA    __printf                  0011CD RLA    
-__seterrno                00147F RLA    tosaddax                  00148A RLA    
-addysp1                   0014A4 RLA    addysp                    0014A5 RLA    
-tosandax                  0014B4 RLA    aslax1                    0014C2 RLA    
-asrax2                    0014CA RLA    asrax4                    0014D9 RLA    
-axlong                    0014F2 RLA    axulong                   0014F8 RLA    
-callmain                  0014FF RLA    donelib                   001516 RLA    
-decsp1                    001522 RLA    decsp2                    00152B RLA    
-decsp4                    001538 RLA    decsp6                    001545 RLA    
-decsp8                    001552 RLA    _fwrite                   00156D RLA    
-tosicmp                   0015EA RLA    incax1                    001616 RLA    
-popax                     00161D RLA    incsp2                    001625 RLA    
-incsp3                    001633 RLA    incsp4                    001638 RLA    
-incsp5                    00163D RLA    incsp6                    001642 RLA    
-incsp8                    001647 RLA    ldauidx                   00164C RLA    
-ldaxidx                   001657 RLA    ldaxysp                   001664 RLA    
-negeax                    00166B RLA    pusheax                   001692 RLA    
-tosltax                   0016AE RLA    _ltoa                     0016CC RLA    
-_ultoa                    00170D RLA    boollt                    001758 RLA    
-boolult                   001768 RLA    _memcpy                   001775 RLA    
-tosumulax                 0017B1 RLA    tosmulax                  0017B1 RLA    
-mul8x16                   0017F8 RLA    mul8x16a                  001802 RLA    
-tosorax                   001832 RLA    __osmaperrno              001842 RLA    
-popptr1                   001858 RLA    _printf                   001866 RLA    
-push1                     001899 RLA    pusha                     0018A2 RLA    
-pusha0                    0018B6 RLA    pushax                    0018B8 RLA    
-pushwysp                  0018D0 RLA    rwcommon                  0018EA RLA    
-tosaslax                  001906 RLA    staspidx                  001939 RLA    
-staxysp                   001951 RLA    staxspidx                 00195A RLA    
-_strlen                   001975 RLA    _strlower                 00198B RLA    
-tossubax                  0019B5 RLA    subysp                    0019C8 RLA    
-tosudivax                 0019D7 RLA    _vfprintf                 001A5C RLA    
-_write                    001A85 RLA    zerobss                   001AD9 RLA    
-__hextab                  001C56 RLA    __longminstr              001C66 RLA    
-__ctype                   001C72 RLA    __DESTRUCTOR_TABLE__      001DCC RLA    
-_stdout                   001DE8 RLA    fdtab                     001E18 RLA    
-initlib                   001E4C RLA    __BSS_RUN__               001E4C RLA    
-__ONCE_RUN__              001E4C RLA    initstdout                001E72  LAI   
-__CONSTRUCTOR_TABLE__     001E83 RLA    __oserror                 001EE6 RLA    
-__errno                   001F12 RLA    __MAIN_SIZE__             00C7F3 REA    
+tmp1                      000012 RLZ    ST                        000090 RLZ    
+__BSS_SIZE__              00009A REA    __STACKSIZE__             000800 REA    
+__HEADER_LAST__           00080D RLA    __MAIN_START__            00080D RLA    
+_main                     000C4E RLA    _bomb_img1                000F80 RLA    
+tosaddax                  000FC2 RLA    addysp1                   000FDC RLA    
+addysp                    000FDD RLA    tosandax                  000FEC RLA    
+aslax1                    000FFA RLA    asrax2                    001002 RLA    
+asrax4                    001011 RLA    callmain                  00102A RLA    
+donelib                   001041 RLA    decsp1                    00104D RLA    
+decsp2                    001056 RLA    decsp4                    001063 RLA    
+decsp6                    001070 RLA    tosicmp                   00107F RLA    
+incax1                    0010AB RLA    incaxy                    0010B4 RLA    
+popax                     0010BD RLA    incsp2                    0010C5 RLA    
+incsp3                    0010D3 RLA    incsp4                    0010D8 RLA    
+incsp5                    0010DD RLA    incsp6                    0010E2 RLA    
+incsp8                    0010E7 RLA    ldauidx                   0010EC RLA    
+ldaxidx                   0010F7 RLA    ldaxysp                   001104 RLA    
+tosltax                   00110F RLA    boolne                    001115 RLA    
+boollt                    001124 RLA    boolult                   001134 RLA    
+_memcpy                   001141 RLA    tosumulax                 00117D RLA    
+tosmulax                  00117D RLA    mul8x16                   0011C4 RLA    
+mul8x16a                  0011CE RLA    tosorax                   0011FE RLA    
+popptr1                   00120E RLA    pusha                     001220 RLA    
+pushax                    001236 RLA    _rand                     00124C RLA    
+_srand                    00126E RLA    __randomize               00127D RLA    
+tosaslax                  001285 RLA    staspidx                  0012B8 RLA    
+staxysp                   0012D0 RLA    staxspidx                 0012D9 RLA    
+tossubax                  0012F6 RLA    zerobss                   001309 RLA    
+__DESTRUCTOR_TABLE__      001330 RLA    __ONCE_RUN__              00137B RLA    
+initlib                   00137B RLA    __BSS_RUN__               00137B RLA    
+__CONSTRUCTOR_TABLE__     0013A1 RLA    __MAIN_SIZE__             00C7F3 REA    
 __HIMEM__                 00D000 REA    _clrscr                   00E544 REA    
-READST                    00FFB7 RLA    SETLFS                    00FFBA RLA    
-OPEN                      00FFC0 RLA    CKOUT                     00FFC9 RLA    
-CLRCH                     00FFCC RLA    BSOUT                     00FFD2 RLA    
-
+BSOUT                     00FFD2 RLA    
 
 
 Imports list:
 -------------
 BSOUT (kernal.o):
-    write.o                   cbm/cbm.inc(49)
     crt0.o                    c64/crt0.s(10)
-CKOUT (kernal.o):
-    write.o                   cbm/cbm.inc(45)
-CLRCH (kernal.o):
-    write.o                   cbm/cbm.inc(46)
-OPEN (kernal.o):
-    write.o                   cbm/cbm.inc(35)
-READST (kernal.o):
-    write.o                   cbm/cbm.inc(32)
-SETLFS (kernal.o):
-    write.o                   cbm/cbm.inc(33)
 ST (status.o):
     crt0.o                    c64/crt0.s(13)
 __BSS_RUN__ ([linker generated]):
@@ -333,206 +229,145 @@ __DESTRUCTOR_COUNT__ ([linker generated]):
 __DESTRUCTOR_TABLE__ ([linker generated]):
     condes.o                  runtime/condes.s(19)
 __EXEHDR__ (exehdr.o):
-    [linker generated]        BnB-c64.cfg(6)
+    [linker generated]        c:\Users\chris\cc65/cfg/c64.cfg(6)
 __HEADER_LAST__ ([linker generated]):
-    [linker generated]        BnB-c64.cfg(15)
-    [linker generated]        BnB-c64.cfg(15)
+    [linker generated]        c:\Users\chris\cc65/cfg/c64.cfg(14)
+    [linker generated]        c:\Users\chris\cc65/cfg/c64.cfg(14)
 __HIMEM__ ([linker generated]):
-    [linker generated]        BnB-c64.cfg(16)
-    [linker generated]        BnB-c64.cfg(15)
+    [linker generated]        c:\Users\chris\cc65/cfg/c64.cfg(15)
+    [linker generated]        c:\Users\chris\cc65/cfg/c64.cfg(14)
 __LOADADDR__ (loadaddr.o):
-    [linker generated]        BnB-c64.cfg(5)
+    [linker generated]        c:\Users\chris\cc65/cfg/c64.cfg(5)
 __MAIN_SIZE__ ([linker generated]):
     crt0.o                    c64/crt0.s(11)
 __MAIN_START__ ([linker generated]):
     crt0.o                    c64/crt0.s(11)
 __ONCE_RUN__ ([linker generated]):
-    [linker generated]        BnB-c64.cfg(16)
-    [linker generated]        BnB-c64.cfg(16)
+    [linker generated]        c:\Users\chris\cc65/cfg/c64.cfg(15)
+    [linker generated]        c:\Users\chris\cc65/cfg/c64.cfg(15)
 __STACKSIZE__ ([linker generated]):
-    [linker generated]        BnB-c64.cfg(16)
+    [linker generated]        c:\Users\chris\cc65/cfg/c64.cfg(15)
 __STARTUP__ (crt0.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(29)
-__ctype (ctype.o):
-    strlower.o                common/strlower.s(13)
-__directerrno (_directerrno.o):
-    write.o                   /home/travis/build/cc65/cc65/asminc/errno.inc(10)
-__errno (errno.o):
-    _seterrno.o               /home/travis/build/cc65/cc65/asminc/errno.inc(7)
-__hextab (_hextab.o):
-    ltoa.o                    common/ltoa.s(10)
-__longminstr (_longminstr.o):
-    ltoa.o                    common/ltoa.s(10)
-__mappederrno (_mappederrno.o):
-    write.o                   /home/travis/build/cc65/cc65/asminc/errno.inc(10)
-__oserror (_oserror.o):
-    _mappederrno.o            /home/travis/build/cc65/cc65/asminc/errno.inc(7)
-    _directerrno.o            /home/travis/build/cc65/cc65/asminc/errno.inc(7)
-    write.o                   /home/travis/build/cc65/cc65/asminc/errno.inc(7)
-__osmaperrno (oserror.o):
-    _mappederrno.o            /home/travis/build/cc65/cc65/asminc/errno.inc(8)
-__printf (_printf.o):
-    vfprintf.o                common/vfprintf.s(10)
-__seterrno (_seterrno.o):
-    _mappederrno.o            /home/travis/build/cc65/cc65/asminc/errno.inc(9)
-    _directerrno.o            /home/travis/build/cc65/cc65/asminc/errno.inc(9)
-    fwrite.o                  /home/travis/build/cc65/cc65/asminc/errno.inc(9)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(30)
+__randomize (randomize.o):
+    Buckets n Bombs.o         src\Buckets n Bombs.s(37)
 _bomb_img1 (sprite_data.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(39)
-_bucket_img (sprite_data.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(38)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(40)
 _clrscr (clrscr.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(36)
-_fwrite (fwrite.o):
-    vfprintf.o                common/vfprintf.s(10)
-_ltoa (ltoa.o):
-    _printf.o                 common/_printf.s(12)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(38)
 _main (Buckets n Bombs.o):
     callmain.o                runtime/callmain.s(11)
 _memcpy (memcpy.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(37)
-_printf (printf.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(35)
-_stdout (_file.o):
-    printf.o                  common/printf.s(8)
-_strlen (strlen.o):
-    _printf.o                 common/_printf.s(13)
-_strlower (strlower.o):
-    _printf.o                 common/_printf.s(13)
-_ultoa (ltoa.o):
-    _printf.o                 common/_printf.s(12)
-_vfprintf (vfprintf.o):
-    printf.o                  common/printf.s(8)
-_write (write.o):
-    fwrite.o                  common/fwrite.s(10)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(39)
+_rand (rand.o):
+    Buckets n Bombs.o         src\Buckets n Bombs.s(36)
+_srand (rand.o):
+    randomize.o               c64/randomize.s(10)
 addysp (addysp.o):
-    incsp6.o                  runtime/incsp6.s(8)
-    fwrite.o                  common/fwrite.s(11)
-    printf.o                  common/printf.s(8)
     incsp8.o                  runtime/incsp8.s(8)
+    incsp6.o                  runtime/incsp6.s(8)
     incsp5.o                  runtime/incsp5.s(8)
     incsp4.o                  runtime/incsp4.s(8)
     incsp3.o                  runtime/incsp3.s(8)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 addysp1 (addysp.o):
     sub.o                     runtime/sub.s(8)
     or.o                      runtime/or.s(9)
     and.o                     runtime/and.s(8)
 aslax1 (aslax1.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 asrax2 (asrax2.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 asrax4 (asrax4.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-axlong (axlong.o):
-    _printf.o                 common/_printf.s(11)
-axulong (axlong.o):
-    _printf.o                 common/_printf.s(11)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 boollt (makebool.o):
     lt.o                      runtime/lt.s(8)
+boolne (makebool.o):
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 boolult (makebool.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 callmain (callmain.o):
     crt0.o                    c64/crt0.s(9)
 decsp1 (decsp1.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 decsp2 (decsp2.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 decsp4 (decsp4.o):
-    lpush.o                   runtime/lpush.s(12)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 decsp6 (decsp6.o):
-    _printf.o                 common/_printf.s(11)
-decsp8 (decsp8.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 donelib (condes.o):
     crt0.o                    c64/crt0.s(8)
-fdtab (filedes.o):
-    write.o                   cbm/filedes.inc(7)
 incax1 (incax1.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+incaxy (incaxy.o):
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 incsp2 (incsp2.o):
     staxspi.o                 runtime/staxspi.s(9)
     staspidx.o                runtime/staspidx.s(8)
     popptr1.o                 runtime/popptr1.s(8)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 incsp3 (incsp3.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 incsp4 (incsp4.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 incsp5 (incsp5.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 incsp6 (incsp6.o):
-    fwrite.o                  common/fwrite.s(11)
-    vfprintf.o                common/vfprintf.s(9)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 incsp8 (incsp8.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 initlib (condes.o):
     crt0.o                    c64/crt0.s(8)
 ldauidx (ldaui.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 ldaxidx (ldaxi.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 ldaxysp (ldaxsp.o):
-    fwrite.o                  common/fwrite.s(11)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 mul8x16 (mul8.o):
     mul.o                     runtime/mul.s(8)
 mul8x16a (mul8.o):
     mul.o                     runtime/mul.s(8)
-negeax (lneg.o):
-    ltoa.o                    common/ltoa.s(9)
 popax (incsp2.o):
-    rwcommon.o                cbm/rwcommon.s(9)
-    ltoa.o                    common/ltoa.s(9)
-    _printf.o                 common/_printf.s(11)
     shl.o                     runtime/shl.s(15)
     memcpy.o                  common/memcpy.s(14)
 popptr1 (popptr1.o):
-    rwcommon.o                cbm/rwcommon.s(9)
-    udiv.o                    runtime/udiv.s(9)
-    ltoa.o                    common/ltoa.s(9)
     mul8.o                    runtime/mul8.s(9)
     mul.o                     runtime/mul.s(9)
     memcpy.o                  common/memcpy.s(14)
 ptr1 (zeropage.o):
-    write.o                   cbm/write.s(11)
-    udiv.o                    runtime/udiv.s(10)
-    strlower.o                common/strlower.s(14)
-    ltoa.o                    common/ltoa.s(11)
-    fwrite.o                  common/fwrite.s(14)
-    _printf.o                 /home/travis/build/cc65/cc65/asminc/zeropage.inc(12)
     zerobss.o                 common/zerobss.s(9)
-    vfprintf.o                common/vfprintf.s(11)
     staxspi.o                 runtime/staxspi.s(10)
     staspidx.o                runtime/staspidx.s(9)
-    printf.o                  common/printf.s(9)
     popptr1.o                 runtime/popptr1.s(9)
     mul8.o                    runtime/mul8.s(10)
     mul.o                     runtime/mul.s(10)
@@ -540,84 +375,50 @@ ptr1 (zeropage.o):
     ldaxi.o                   runtime/ldaxi.s(8)
     ldaui.o                   runtime/ldaui.s(8)
 ptr2 (zeropage.o):
-    rwcommon.o                cbm/rwcommon.s(10)
-    write.o                   cbm/write.s(11)
-    strlower.o                common/strlower.s(14)
-    strlen.o                  common/strlen.s(12)
-    ltoa.o                    common/ltoa.s(11)
-    _printf.o                 /home/travis/build/cc65/cc65/asminc/zeropage.inc(12)
     memcpy.o                  common/memcpy.s(15)
 ptr3 (zeropage.o):
-    rwcommon.o                cbm/rwcommon.s(10)
-    write.o                   cbm/write.s(11)
-    ltoa.o                    common/ltoa.s(11)
     memcpy.o                  common/memcpy.s(15)
 ptr4 (zeropage.o):
-    udiv.o                    runtime/udiv.s(10)
     mul8.o                    runtime/mul8.s(10)
     mul.o                     runtime/mul.s(10)
-push1 (push1.o):
-    _printf.o                 common/_printf.s(11)
-    vfprintf.o                common/vfprintf.s(9)
 pusha (pusha.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-pusha0 (pushax.o):
-    push1.o                   runtime/push1.s(8)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 pushax (pushax.o):
-    fwrite.o                  common/fwrite.s(11)
     callmain.o                runtime/callmain.s(11)
-    _printf.o                 common/_printf.s(11)
-    printf.o                  common/printf.s(8)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-pusheax (lpush.o):
-    _printf.o                 common/_printf.s(11)
-pushwysp (pushwsp.o):
-    fwrite.o                  common/fwrite.s(11)
-    vfprintf.o                common/vfprintf.s(9)
-regbank (zeropage.o):
-    _printf.o                 /home/travis/build/cc65/cc65/asminc/zeropage.inc(14)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 regsave (zeropage.o):
     Buckets n Bombs.o         src\Buckets n Bombs.s(10)
-rwcommon (rwcommon.o):
-    write.o                   cbm/write.s(10)
 sp (zeropage.o):
-    pushwsp.o                 runtime/pushwsp.s(8)
-    lpush.o                   runtime/lpush.s(13)
     icmp.o                    runtime/icmp.s(9)
-    decsp6.o                  runtime/decsp6.s(8)
-    _printf.o                 /home/travis/build/cc65/cc65/asminc/zeropage.inc(11)
-    vfprintf.o                common/vfprintf.s(11)
-    subysp.o                  runtime/subysp.s(9)
     sub.o                     runtime/sub.s(9)
     staxspi.o                 runtime/staxspi.s(10)
     staxsp.o                  runtime/staxsp.s(8)
     staspidx.o                runtime/staspidx.s(9)
     pushax.o                  runtime/pushax.s(8)
     pusha.o                   runtime/pusha.s(8)
-    printf.o                  common/printf.s(9)
     popptr1.o                 runtime/popptr1.s(9)
     or.o                      runtime/or.s(10)
     memcpy.o                  common/memcpy.s(15)
     ldaxsp.o                  runtime/ldaxsp.s(8)
     incsp2.o                  runtime/incsp2.s(8)
-    decsp8.o                  runtime/decsp8.s(8)
+    decsp6.o                  runtime/decsp6.s(8)
     decsp4.o                  runtime/decsp4.s(8)
     decsp2.o                  runtime/decsp2.s(8)
     decsp1.o                  runtime/decsp1.s(8)
@@ -627,74 +428,57 @@ sp (zeropage.o):
     add.o                     runtime/add.s(12)
     Buckets n Bombs.o         src\Buckets n Bombs.s(10)
 sreg (zeropage.o):
-    lneg.o                    runtime/lneg.s(11)
-    udiv.o                    runtime/udiv.s(10)
-    ltoa.o                    common/ltoa.s(11)
-    lpush.o                   runtime/lpush.s(13)
     icmp.o                    runtime/icmp.s(9)
-    axlong.o                  runtime/axlong.s(9)
-    _printf.o                 /home/travis/build/cc65/cc65/asminc/zeropage.inc(11)
 staspidx (staspidx.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 staxspidx (staxspi.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 staxysp (staxsp.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-subysp (subysp.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 tmp1 (zeropage.o):
-    ltoa.o                    common/ltoa.s(11)
-    _printf.o                 /home/travis/build/cc65/cc65/asminc/zeropage.inc(13)
     staxspi.o                 runtime/staxspi.s(10)
     staspidx.o                runtime/staspidx.s(9)
     shl.o                     runtime/shl.s(16)
     or.o                      runtime/or.s(10)
     mul.o                     runtime/mul.s(10)
+    incaxy.o                  runtime/incaxy.s(8)
     asrax4.o                  runtime/asrax4.s(9)
     asrax2.o                  runtime/asrax2.s(8)
     aslax1.o                  runtime/aslax1.s(8)
     add.o                     runtime/add.s(12)
-tmp2 (zeropage.o):
-    rwcommon.o                cbm/rwcommon.s(10)
 tosaddax (add.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 tosandax (and.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 tosaslax (shl.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 tosicmp (icmp.o):
     lt.o                      runtime/lt.s(8)
 tosltax (lt.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 tosmulax (mul.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 tosorax (or.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 tossubax (sub.o):
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
-tosudivax (udiv.o):
-    fwrite.o                  common/fwrite.s(12)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 tosumulax (mul.o):
-    fwrite.o                  common/fwrite.s(12)
-    Buckets n Bombs.o         src\Buckets n Bombs.s(1290)
+    Buckets n Bombs.o         src\Buckets n Bombs.s(1141)
 zerobss (zerobss.o):
     crt0.o                    c64/crt0.s(9)
 

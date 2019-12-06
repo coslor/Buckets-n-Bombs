@@ -13,6 +13,7 @@ extern  const unsigned char bomb_img1[];
 		
 typedef unsigned char color;
 
+//These need to be int's, as x can be > 255, and I'd rather not mix types here -- confusing!
 typedef struct  vector2 {
 	unsigned int		x;
 	unsigned int		y;
@@ -61,3 +62,5 @@ void init_sprite(sprite *spr, int VIC_sprite_num, int x, int y,
 void set_VIC_sprite_location(sprite *s);
 
 void move_sprites(sprite sprites[]);
+
+unsigned int set_bit(unsigned int start_value, int bit_num, BOOL bool_value);
