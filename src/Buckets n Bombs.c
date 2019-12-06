@@ -10,85 +10,48 @@
 
 
 /* The VIC pointer to data for sprite 0 */
-unsigned char* SPRITE0_POINTER=(unsigned char*)0x7f8;
+unsigned char* SPRITE0_POINTER=(unsigned char*)0x07f8;
 
-/* The buffer holding sprite 0 data */
-//unsigned char* SPRITE0_BUFFER=(unsigned char*)0x3000;
-//unsigned char SPRITE0_BUFFER[63];
-
-//TODO This buffer is allocated in sprite_data.s at $3000, which is somewhere in the middle of BASIC memory space. I need to figure out a rational memory map.
-//extern unsigned char SPRITE0_BUFFER[];
-
-//stylized tennis shoe - 
-//extern const unsigned char *shoe_img;
-
+int sprite_ratio;
 
 void main(void) {
-	//int i;
-	//int x,y, xInc, yInc;
-	//int sprite_ratio;	
-	sprite t = {
-		0,			//VIC sprite num
-		{0,0},		//loc
-		{0,0},		//speed
-		{0,1,2,3},	//color
-		TRUE,		//multicolor?
-		FALSE,		//expand x?
-		FALSE,		//expand y?
-		TRUE		//enabled?
-		//(unsigned char*)bomb_img1	//image
-	 };
-	 t.image_buffer = bomb_img1;
-
-	sprites[0] = t;
+	int i,j;
+	unsigned char colors[4] = { COLOR_RED, COLOR_BLACK, COLOR_YELLOW, COLOR_BLACK };
 	
-	
-	
-	
-	//init_sprite();
 	clrscr();
-	//printf("Hello C64! shoe buffer=%x\n", shoe_img);
+	
+	printf("bucket_img=%p bomb_img1=%p\n", bucket_img, bomb_img1);
+	
+	printf("bucket_img=%d\n", bucket_img);
+
+	
+	init_sprite(&sprites[0],
+		0,				//VIC sprite num
+		100, 100, 		//x,y location
+		10, 10,
+		TRUE, 			//enabled
+		TRUE,			//multicolor?
+		COLOR_BLACK, 	//colors
+		FALSE, 			//expand x?
+		FALSE, 			//expand y?
+		(unsigned char *)bomb_img1
+		);
+
+	VIC.spr_mcolors[0] = COLOR_RED;
+	VIC.spr_mcolors[1] = COLOR_YELLOW;
+	
+	while (TRUE) {
+		move_sprites(sprites);
 		
-	//bufferInt = SPRITE0_BUFFER;
-	//sprite_ratio = (int)shoe_img / 64;
-
-	////TODO fix warning here: 
-	//copy_sprite(SPRITE0_BUFFER, bomb_img1);
-	
-
-	//*SPRITE0_POINTER = sprite_ratio;
-	
-	//printf("SPRITE0_POINTER[0] should contain %d, does contain %d\n", sprite_ratio, *SPRITE0_POINTER);
-	
-	
-	// VIC.spr_hi_x = 0;
-	// VIC.spr0_x = 100;
-	// VIC.spr0_y = 100;
-	
-	// printf("Turning sprite on...\n");
-	
-	// //Enable sprite 0
-	// VIC.spr_ena |= 1;
-	
-	// xInc=1;
-	// yInc=-1;
-	// x=24;
-	// y=100;
-	
-	// while (TRUE) {
-
-		// main_loop(&x, &y);
-		// delay(50);
-	// }
-/* 	for (i=0; i < 255; i++) {
-		VIC.spr0_x = i;
-
-		for (j=0; j < 100; j++) {
-		}
- 	}
-*/	
-	
-	
+		for (i=0; i < NUM_SPRITES; i++) {
+			if ((sprites[i].loc.x < 24) || (sprites[i].loc.x > 343)){
+				sprites[i].speed.x *= -1;
+			}
+			if ((sprites[i].loc.y < 30) || (sprites[i].loc.y > 229)) {
+				sprites[i].speed.y *= -1;
+			}
+		}//for
+	}//while
 }
 
 void copy_sprite_image(unsigned char sprite_image_buffer[], unsigned char image_data[]) {
@@ -98,68 +61,47 @@ void copy_sprite_image(unsigned char sprite_image_buffer[], unsigned char image_
 }
 
 
-
-void main_loop(int *x, int *y) {
-	
-	static int xInc=1;
-	static int yInc=1;
-
-	*x += xInc;
-	*y += yInc;
-	
-	if ((*x <= 24) || (*x >= 320)) {
-		xInc *= -1;
-	}
-	
-	if ((*y < 42) || (*y > 235)) {
-		yInc *= -1;
-	}
-	
-	VIC.spr_pos[0].x = (*x & 255);
-	VIC.spr_pos[0].y = *y;
-	
-	if (*x > 255) {
-		VIC.spr_hi_x = VIC.spr_hi_x | 1;
-	}
-	else {
-		VIC.spr_hi_x = VIC.spr_hi_x & 254;
-	}
-	
-}
-
-
 void move_sprites(sprite sprites[]) {
 	int i;
 	sprite s;
-	unsigned int vic_num;
-	unsigned char pow2;
+	
+	printf("move_sprites()\n");
 	
 	for (i=0; i < NUM_SPRITES; i++) {
 		s = sprites[i];
 		if (s.enabled) {
-			s.loc.x += s.speed.x;
-			s.loc.y += s.speed.y;
+			printf("move_sprites(%d %d %d)\n", i, s.speed.x, s.speed.y);
 			
-			vic_num = s.VIC_sprite_num;
-			VIC.spr_pos[vic_num].x = (s.loc.x & 255);
-			VIC.spr_pos[vic_num].y = s.loc.y;
+			s.loc.x = s.loc.x + s.speed.x;
+			s.loc.y = s.loc.y + s.speed.y;
 			
-			/* 
-				The sprite's x coord is a 9-bit value, and the top bit is held in spr_hi_x.
-				To set it, we need to set (or unset) the bit corresponding to VIC's sprite #.
-			*/
-			if (s.loc.x > 255) {
-					pow2 = 2 << vic_num;
-				VIC.spr_hi_x = VIC.spr_hi_x | pow2;
-			}
-			else {
-				VIC.spr_hi_x = VIC.spr_hi_x & (255 - pow2);
-			}
-			
+		set_VIC_sprite_location(&s);
 		}
 	}
 }
 
+void set_VIC_sprite_location(sprite *s) {
+	unsigned char pow2;
+	int vic_num = s->VIC_sprite_num;
+	
+	printf("set_VIC_sprite_location()%d, %d, %d\n", s->VIC_sprite_num, s->loc.x, s->loc.y);
+
+	VIC.spr_pos[vic_num].x = (s->loc.x & 255);
+	VIC.spr_pos[vic_num].y = s->loc.y;
+		
+	/* 
+		The sprite's x coord is a 9-bit value, and the top bit is held in spr_hi_x.
+		To set it, we need to set (or unset) the bit corresponding to VIC's sprite #.
+	*/
+	if (s->loc.x > 255) {
+			pow2 = 2 << vic_num;
+		VIC.spr_hi_x = VIC.spr_hi_x | pow2;
+	}
+	else {
+		VIC.spr_hi_x = VIC.spr_hi_x & (255 - pow2);
+	}
+
+}
 
 void delay(int time) {
 	int i;
@@ -171,39 +113,71 @@ void delay(int time) {
 
 void set_sprite_image_handle(sprite *s, unsigned char *image_buffer) {
 	//TODO deal with bank switching, etc. here
-	int sprite_addr_ratio = (int)image_buffer / 64;
+	
+	
+	int i;
+	int sprite_addr_ratio;
+	//int sprite_addr_ratio = 192; //((int)image_buffer / 64);
 
-	*(SPRITE0_POINTER + s->VIC_sprite_num) = sprite_addr_ratio;
 
-	s->image_buffer = image_buffer;
+	//image_buffer = (unsigned char *)(0x340);
+
+	sprite_addr_ratio = (int)image_buffer / 64;
+	
+	printf("sprite:%p image_buffer:%p\n", s, image_buffer);
+	// for (i=0; i < 63; i++) {
+		// //*(image_buffer + i) = 0xff;
+		// printf("%x ", *(image_buffer + i));
+	// }
+	// printf("\n");
+	
+
+
+	SPRITE0_POINTER[s->VIC_sprite_num] = sprite_addr_ratio;
+
+	printf("set_sprite_image_handle(%p, %p):ratio=%d\n", s, image_buffer, sprite_addr_ratio);
 
 }
 
-void init_sprite(sprite *spr, int x, int y, BOOL active,
-		BOOL multicolor, unsigned char color0, unsigned char color1, unsigned char color2, unsigned char color3,
+void init_sprite(sprite *spr, int VIC_sprite_num, 
+		int x, int y, 
+		int x_speed, int y_speed,
+		BOOL active,
+		BOOL multicolor, unsigned char sprite_color, 
 		BOOL expand_x, BOOL expand_y, unsigned char *image_buffer) {
 	
-	spr->loc.x = x;
-	spr->loc.y = y;
+	spr->VIC_sprite_num = VIC_sprite_num;
 	
 	spr->loc.x = x;
 	spr->loc.y = y;
+	
+	spr->speed.x = x_speed;
+	spr->speed.y = y_speed;
 
 	spr->expand_x = expand_x;
 	spr->expand_y = expand_y;
 	
 	
+	printf("init_sprite():image_buffer = %x\n", image_buffer);
+	
 	//Now, do the necessary VIC2 stuff for this sprite
 	set_sprite_image_handle(spr, image_buffer);
-	enable_sprite(spr, (BOOL)active);
-	set_sprite_color(spr, multicolor, color0, color1, color2, color3);	
+	set_sprite_color(spr, multicolor, sprite_color);	
+	set_VIC_sprite_location(spr);
+	enable_sprite(spr, active);
 }
 
 
+/* Returns the value with the bit set. Does NOT set the bit in memory! */
 unsigned int set_bit(unsigned int start_value, int bit_num, BOOL bool_value) {
 	unsigned int final_value;
 	
-	int pwr2 = 2 << bit_num;
+	int pwr2 = 1 << bit_num;
+
+	printf("set_bit(%d, %d,%d)\n", start_value, bit_num, bool_value);
+	
+	
+	printf("pwr2=%d\n", pwr2);
 	
 	if (bool_value) {
 		final_value = start_value | pwr2;
@@ -211,38 +185,44 @@ unsigned int set_bit(unsigned int start_value, int bit_num, BOOL bool_value) {
 	else {
 		final_value = start_value & (255 - pwr2);
 	}
+	
+	printf("final_value=%d\n", final_value);
+		
 	return final_value;
 }
 
 
 void enable_sprite(sprite *s, BOOL enabled) {
+	//TODO FIX
+	//VIC.spr_ena = 1; 
 	VIC.spr_ena = set_bit(VIC.spr_ena, s->VIC_sprite_num, enabled);
 	s->enabled = enabled;
+	
+	printf("enable_sprite()\n");
 }
 
 
 void set_multicolor(sprite *s, BOOL multicolor) {
 	VIC.spr_mcolor = set_bit(VIC.spr_mcolor, s->VIC_sprite_num, multicolor);
 	s->multicolor = multicolor;
+	
+	printf("set_multicolor()\n");
 }
 
 
 void set_sprite_color(sprite *s, BOOL multicolor, 
-		unsigned char color0, unsigned char color1, unsigned char color2, unsigned char color3) {
+		unsigned char sprite_color) {
 	s->multicolor = multicolor;
 	
-	s->color[0] = color0;
-	s->color[1] = color1;
-	s->color[2] = color2;
-	s->color[3] = color3;
-
+	s->sprite_color = sprite_color;
+	
+	printf("set_sprite_color(%d)\n", sprite_color);
+	
 	VIC.spr_mcolor = set_bit(VIC.spr_mcolor, s->VIC_sprite_num, multicolor);
 	
-	//Set x and y coords to 100
-	*(unsigned char*)(VIC.spr0_color + s->VIC_sprite_num) = color1;
-	VIC.spr_mcolor0 = color2;
-	VIC.spr_mcolor1 = color3;
+	VIC.spr_color[s->VIC_sprite_num] = sprite_color;
 	
+	printf("set_Sprite_color\n");
 }
 
 
@@ -252,6 +232,7 @@ void set_image(sprite *s, unsigned char* buffer) {
 
 
 void update_sprite(sprite *s) {
+	set_VIC_sprite_location(s);
 	
 }
 

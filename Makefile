@@ -32,7 +32,9 @@ DISK_NAME=bin\$(TARGET_NAME).d64
 all: run
 
 $(TARGET):
-	cl65 -O -I "include" -o $(TARGET) "src\Buckets n Bombs.c" "src\sprite_data.s"
+# 	-O for optimized ocde ,-g for debugging
+#	cl65 -O -I "include" -o $(TARGET) "src\Buckets n Bombs.c" "src\sprite_data.s"
+	cl65 -g --debug-info -Wl  --dbgfile,BnB.dbg -Ln BnB.lbl -m BnB.map -C BnB-c64.cfg -I "include" -o $(TARGET) "src\Buckets n Bombs.c" "src\sprite_data.s"
 	
 clean:
 	del /F $(DISK_NAME) $(TARGET)

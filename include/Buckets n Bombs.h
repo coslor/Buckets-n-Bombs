@@ -3,12 +3,13 @@
 #define FALSE 0
 #define NUM_SPRITES 8
 
+#define SPRITE_BUFFER $3000
 
 //bucket
-extern const unsigned char *bucket_img;
+extern const unsigned char bucket_img[];
 
 //first frame of bomb animation
-extern  unsigned char *bomb_img1;
+extern  const unsigned char bomb_img1[];
 		
 typedef unsigned char color;
 
@@ -21,17 +22,16 @@ typedef struct  vector2 {
 typedef struct  {
 	unsigned int 	VIC_sprite_num;
 	
-	vector2	loc;
-	vector2	speed;
+	vector2			loc;
+	vector2			speed;
 	
-	//TODO This doesn't make sense. Each sprite only has 2 unique colors.
-	unsigned char	color[4];
-	BOOL	multicolor;
+	unsigned char	sprite_color;
+	BOOL			multicolor;
 	
-	BOOL	expand_x;
-	BOOL	expand_y;
+	BOOL			expand_x;
+	BOOL			expand_y;
 	
-	BOOL	enabled;
+	BOOL			enabled;
 	
 	unsigned char	*image_buffer;
 } sprite;
@@ -41,6 +41,7 @@ int x[NUM_SPRITES];
 
 sprite  sprites[NUM_SPRITES];
 
+void copy_sprite_image(unsigned char sprite_image_buffer[], unsigned char image_data[]);
 
 void delay(int time);
 void main_loop(int *x, int *y);
@@ -48,7 +49,15 @@ void copy_sprite(unsigned char sprite_buffer[], unsigned char image_data[]);
 void enable_sprite(sprite *s, BOOL enabled);
 void set_multicolor(sprite *s, BOOL multicolor);
 void set_sprite_color(sprite *s, BOOL multicolor, 
-		unsigned char color0, unsigned char color1, unsigned char color2, unsigned char color3);
+		unsigned char sprite_color);
 void set_image(sprite *s, unsigned char *buffer);
 
+void init_sprite(sprite *spr, int VIC_sprite_num, int x, int y, 
+		x_speed, y_speed, BOOL active,
+		BOOL multicolor, unsigned char sprite_color,
+		BOOL expand_x, BOOL expand_y, unsigned char *image_buffer);
 
+
+void set_VIC_sprite_location(sprite *s);
+
+void move_sprites(sprite sprites[]);
